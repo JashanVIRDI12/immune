@@ -1,6 +1,5 @@
 'use client';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
+
 import { motion } from 'framer-motion';
 import styles from './page.module.css';
 import Image from 'next/image';
@@ -13,7 +12,6 @@ const fadeUpText = {
 export default function SciencePage() {
     return (
         <main className={styles.main}>
-            <Navbar />
 
             {/* Ambient Backgrounds */}
             <div className={styles.ambientNoise} />
@@ -109,7 +107,6 @@ export default function SciencePage() {
                 </div>
             </div>
 
-            <Footer />
         </main>
     );
 }

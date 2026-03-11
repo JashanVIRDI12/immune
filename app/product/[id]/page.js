@@ -1,8 +1,6 @@
 'use client';
 import { useState } from 'react';
 import { use } from 'react';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -66,7 +64,6 @@ export default function ProductPage({ params }) {
 
     return (
         <main className={styles.main}>
-            <Navbar />
 
             {/* Breadcrumb */}
             <div className={styles.breadcrumbBar}>
@@ -328,7 +325,6 @@ export default function ProductPage({ params }) {
                 </div>
             </section>
 
-            <Footer />
         </main>
     );
 }

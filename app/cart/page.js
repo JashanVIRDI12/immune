@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
+
 import Link from 'next/link';
 import { ShoppingBag, Trash2, Plus, Minus, ArrowRight, Shield, ChevronRight } from 'lucide-react';
 import styles from './page.module.css';
@@ -34,7 +33,7 @@ export default function CartPage() {
             <div className={styles.ambientNoise} />
             <div className={styles.ambientOrb} />
 
-            <Navbar />
+
 
             <div className={styles.container}>
                 <div className={styles.headerContent}>
@@ -157,7 +156,7 @@ export default function CartPage() {
                     </div>
                 )}
             </div>
-            <Footer />
+
         </main>
     );
 }

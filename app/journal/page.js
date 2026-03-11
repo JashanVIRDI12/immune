@@ -1,6 +1,5 @@
 'use client';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
+
 import { motion } from 'framer-motion';
 import styles from './page.module.css';
 
@@ -30,7 +29,6 @@ const articles = [
 export default function JournalPage() {
     return (
         <main className={styles.main}>
-            <Navbar />
 
             <div className={styles.ambientNoise} />
             <div className={styles.ambientOrb} />
@@ -96,7 +94,6 @@ export default function JournalPage() {
                 </div>
             </div>
 
-            <Footer />
         </main>
     );
 }

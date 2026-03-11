@@ -1,7 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -52,7 +50,6 @@ export default function CollectionsPage() {
 
     return (
         <main className={styles.main}>
-            <Navbar />
 
             {/* Ambient Backgrounds */}
             <div className={styles.ambientNoise} />
@@ -125,7 +122,7 @@ export default function CollectionsPage() {
                 <motion.div
                     className={styles.grid}
                 >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence mode="sync">
                         {sorted.length > 0 ? sorted.map((product, index) => (
                             <motion.div
                                 key={`${activeCategory}-${product.id}`}
@@ -182,7 +179,6 @@ export default function CollectionsPage() {
                 </motion.div>
             </div>
 
-            <Footer />
         </main>
     );
 }

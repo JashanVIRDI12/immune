@@ -135,7 +135,7 @@ export default function FeaturedProducts() {
                     className={styles.grid}
                     key={activeCategory}
                 >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence mode="sync">
                         {filtered.map((product, index) => (
                             <motion.div
                                 key={`${activeCategory}-${product.id}`}

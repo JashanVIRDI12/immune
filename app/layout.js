@@ -1,4 +1,6 @@
 import './globals.css';
+import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'IMMUNE — Ultra Luxury Wellness',
@@ -22,7 +24,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body style={{ background: '#060a08' }}>{children}</body>
+      <body style={{ background: '#060a08' }}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

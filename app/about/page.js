@@ -1,6 +1,5 @@
 'use client';
-import Navbar from '@/components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
+
 import { motion } from 'framer-motion';
 import styles from './page.module.css';
 
@@ -12,7 +11,6 @@ const fadeUpText = {
 export default function AboutPage() {
     return (
         <main className={styles.main}>
-            <Navbar />
 
             <div className={styles.ambientNoise} />
             <div className={styles.ambientOrb} />
@@ -89,7 +87,6 @@ export default function AboutPage() {
                 </motion.div>
             </div>
 
-            <Footer />
         </main>
     );
 }
