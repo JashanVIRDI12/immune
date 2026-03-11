@@ -1,0 +1,287 @@
+.footer {
+    background: var(--dark-1);
+    border-top: 1px solid var(--glass-border);
+}
+
+/* ── Top ── */
+.top {
+    padding: 80px 0 64px;
+}
+
+.topInner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--container-px);
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1.4fr;
+    gap: 48px;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logoWrap {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logoText {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--off-white);
+    letter-spacing: 0.1em;
+    display: block;
+}
+
+.tagline {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--grey-500);
+    line-height: 1.75;
+    max-width: 240px;
+}
+
+.socials {
+    display: flex;
+    gap: 8px;
+}
+
+.socialBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--glass-bg-light);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-400);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.socialBtn:hover {
+    background: rgba(9, 54, 36, 0.3);
+    border-color: var(--glass-border-green);
+    color: var(--g-200);
+}
+
+/* Link Groups */
+.linkGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.linkGroupTitle {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--grey-400);
+}
+
+.linkList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footLink {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--grey-500);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+}
+
+.footLink:hover {
+    color: var(--off-white);
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.newsletterTitle {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--off-white);
+    line-height: 1.2;
+}
+
+.newsletterDesc {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--grey-500);
+    line-height: 1.7;
+}
+
+.newsletterForm {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.2s;
+}
+
+.newsletterForm:focus-within {
+    border-color: var(--glass-border-green);
+}
+
+.emailInput {
+    flex: 1;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: var(--off-white);
+    font-family: var(--font-body);
+    font-size: 13px;
+    outline: none;
+}
+
+.emailInput::placeholder {
+    color: var(--grey-600);
+}
+
+.submitBtn {
+    width: 44px;
+    background: var(--g-700);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover {
+    background: var(--g-500);
+}
+
+/* ── Bottom ── */
+.bottom {
+    border-top: 1px solid var(--glass-border);
+    padding: 20px 0;
+}
+
+.bottomInner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--container-px);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.copy {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--grey-600);
+    flex: 1;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.bottomLink {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grey-600);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.bottomLink:hover {
+    color: var(--grey-300);
+}
+
+.certBadges {
+    display: flex;
+    gap: 8px;
+}
+
+.cert {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--g-300);
+    background: rgba(9, 54, 36, 0.25);
+    border: 1px solid var(--glass-border-green);
+    padding: 4px 10px;
+    border-radius: 100px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+    .topInner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .brand,
+    .newsletter {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .topInner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .brand {
+        grid-column: span 2;
+    }
+
+    .newsletter {
+        grid-column: span 2;
+    }
+
+    .bottomInner {
+        gap: 16px;
+    }
+
+    .copy {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .topInner {
+        grid-template-columns: 1fr;
+    }
+
+    .brand,
+    .newsletter {
+        grid-column: 1;
+    }
+}

@@ -1,0 +1,281 @@
+.section {
+    position: relative;
+    padding: 100px 0 120px;
+    background: var(--dark-1);
+    overflow: hidden;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: -80px;
+    background: radial-gradient(circle, rgba(9, 54, 36, 0.3) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.overlineRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto 40px;
+    padding: 0 var(--container-px);
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: var(--glass-border);
+}
+
+.overline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--g-300);
+    white-space: nowrap;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: clamp(34px, 4.5vw, 60px);
+    font-weight: 400;
+    color: var(--off-white);
+    text-align: center;
+    line-height: 1.05;
+    margin-bottom: 64px;
+}
+
+.title em {
+    font-style: italic;
+    color: var(--g-200);
+}
+
+.layout {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--container-px);
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 64px;
+    align-items: start;
+}
+
+/* ── Quote area ── */
+.quoteArea {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 48px 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quoteMarks {
+    font-family: var(--font-display);
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 0.7;
+    color: var(--g-700);
+    user-select: none;
+}
+
+.quoteText {
+    font-family: var(--font-display);
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--off-white);
+    line-height: 1.6;
+}
+
+.quoteFooter {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--glass-border);
+    flex-wrap: wrap;
+}
+
+.quoteAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--g-700);
+    border: 1px solid var(--glass-border-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--g-100);
+    flex-shrink: 0;
+}
+
+.quoteName {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 3px;
+}
+
+.quoteRole {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--grey-400);
+    text-transform: uppercase;
+}
+
+.quoteProduct {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--g-300);
+    background: rgba(9, 54, 36, 0.3);
+    border: 1px solid var(--glass-border-green);
+    padding: 5px 12px;
+    border-radius: 100px;
+}
+
+/* ── Selector ── */
+.selector {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.selectorBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.selectorBtn:hover {
+    background: var(--glass-bg-light);
+    border-color: var(--glass-border);
+}
+
+.selectorActive {
+    background: var(--glass-bg) !important;
+    border-color: var(--glass-border-green) !important;
+}
+
+.activeIndicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--g-300), var(--g-500));
+    border-radius: 0 2px 2px 0;
+}
+
+.selectorAvatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--dark-3);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--grey-300);
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+
+.selectorActive .selectorAvatar {
+    border-color: var(--glass-border-green);
+    background: rgba(9, 54, 36, 0.3);
+    color: var(--g-200);
+}
+
+.selectorName {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 2px;
+}
+
+.selectorRole {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--grey-500);
+    text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .selector {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .selectorBtn {
+        flex-shrink: 0;
+        min-width: 200px;
+    }
+
+    .quoteProduct {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .quoteArea {
+        padding: 32px 28px;
+    }
+
+    .quoteText {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: clamp(32px, 8vw, 60px);
+        margin-bottom: 48px;
+    }
+}
